@@ -1,4 +1,4 @@
-var allBoxes = {}
+var allBoxes = [];
 var check = false;
 var curBox;
 var widthF;
@@ -18,9 +18,9 @@ addEventListener("mousemove",movement);
 addEventListener("mouseup",drop);
 addEventListener("keydown", change);
 
-for (var box of allBoxes) {
-	box.addEventListener("mousedown",checkif);
-	box.addEventListener("dblclick", textEdit);
+for (var i=0; i<allBoxes.length; i++) {
+	allBoxes[i].addEventListener("mousedown",checkif);
+	allBoxes[i].addEventListener("dblclick", textEdit);
 }
 
 
@@ -321,10 +321,10 @@ function addCercle() {
 
 	allBoxes = document.getElementsByClassName("draggableBox");
 	
-	for (var box of allBoxes) {
-		box.addEventListener("mousedown",checkif);
-		box.addEventListener("dblclick", textEdit);
-	}
+for (var i=0; i<allBoxes.length; i++) {
+	allBoxes[i].addEventListener("mousedown",checkif);
+	allBoxes[i].addEventListener("dblclick", textEdit);
+}
 
 	curBox = newCircle;
 
@@ -355,10 +355,10 @@ function addCarre() {
 
 	allBoxes = document.getElementsByClassName("draggableBox");
 	
-	for (var box of allBoxes) {
-		box.addEventListener("mousedown",checkif);
-		box.addEventListener("dblclick", textEdit);
-	}
+	for (var i=0; i<allBoxes.length; i++) {
+	allBoxes[i].addEventListener("mousedown",checkif);
+	allBoxes[i].addEventListener("dblclick", textEdit);
+}
 
 	curBox = newSquare;
 }
